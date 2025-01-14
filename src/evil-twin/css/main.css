@@ -3,245 +3,244 @@
 /* --------------------CUSTOMIZATION-------------------- */
 
 :root {
-	/* add more customizations to your liking */
+    /* AT&T design */
+    --default-body-background-image:    linear-gradient(to bottom, #f0f9ff, #ffffff);
+    --default-body-background-position: center;
+    --default-body-background-repeat:   no-repeat;
+    --default-body-background-size:     cover;
+    --default-body-background-color:    #f0f9ff;
+    --default-body-padding:             1rem;
+    --default-body-color:               #333333;
+    --default-body-font-family:         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-	/* new design */
-	--default-body-background-image:    none;
-	--default-body-background-position: none;
-	--default-body-background-repeat:   none;
-	--default-body-background-size:     none;
-	--default-body-background-color:    #F8F8F8;
-	--default-body-padding:             0.5em 1.5em;
-	--default-body-color:               #262626;
-	--default-body-font-family:         Arial, Helvetica, sans-serif;
+    --default-form-layout-background:  #ffffff;
+    --default-form-layout-padding:     2rem;
+    --default-form-layout-width:       28rem;
+    --default-form-layout-width-media: 24rem;
+    --default-form-layout-color:       #333333;
+    --default-form-layout-border:      none;
+    --default-form-layout-border-radius: 0.5rem;
+    --default-form-layout-box-shadow:  0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
-	--default-form-layout-background:  none;
-	--default-form-layout-padding:     none;
-	--default-form-layout-width:       none;
-	--default-form-layout-width-media: none;
-	--default-form-layout-color:       none;
-	--default-form-layout-border:      none;
+    --default-form-logo-width:       16em;
+    --default-form-logo-width-media: 14em;
 
-	--default-form-logo-width:       12em;
-	--default-form-logo-width-media: 11em;
+    --default-form-width:       24em;
+    --default-form-width-media: 20em;
 
-	--default-form-width:       18em;
-	--default-form-width-media: 14em;
+    --default-form-title:          1.25rem;
+    --default-form-title-media:    1rem;
+    --default-form-subtitle:       0.875rem;
+    --default-form-subtitle-media: 0.75rem;
 
-	--default-form-title:          2.6em;
-	--default-form-title-media:    2.6em;
-	--default-form-subtitle:       1.4em;
-	--default-form-subtitle-media: 1.4em;
+    --default-form-input-background-color: #ffffff;
+    --default-form-input-color:            #333333;
+    --default-form-input-padding:          0.75rem 2.5rem 0.75rem 1rem;
+    --default-form-input-font-size:        0.875rem;
+    --default-form-input-border:           1px solid #d1d5db;
+    --default-form-input-border-radius:    0.375rem;
+    --default-form-input-box-shadow:       inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    --default-form-input-transition:       all 0.2s ease;
 
-	--default-form-input-background-color: #FFF;
-	--default-form-input-color:            inherit;
-	--default-form-input-padding:          0.2em 0.7em;
-	--default-form-input-font-size:        1.3em;
-	--default-form-input-border-top:       0.07em solid #9D2A00;
-	--default-form-input-border-right:     0.07em solid #9D2A00;
-	--default-form-input-border-bottom:    0.07em solid #9D2A00;
-	--default-form-input-border-left:      0.07em solid #9D2A00;
-	--default-form-input-border-radius:    1em;
+    --default-form-submit-background-color:       #009fdb;
+    --default-form-submit-background-color-hover: #0083b3;
+    --default-form-submit-color:                  #ffffff;
+    --default-form-submit-border:                 none;
+    --default-form-submit-border-radius:          0.375rem;
+    --default-form-submit-padding:                0.75rem 1rem;
+    --default-form-submit-font-size:              1rem;
+    --default-form-submit-font-weight:            500;
+    --default-form-submit-box-shadow:             0 2px 4px rgba(0, 0, 0, 0.1);
+    --default-form-submit-transition:             background-color 0.2s;
 
-	--default-form-submit-background-color:       #FF4500;
-	--default-form-submit-background-color-hover: #D83A00;
-	--default-form-submit-color:                  #F8F8F8;
-	--default-form-submit-border-top:             0.07em solid #9D2A00;
-	--default-form-submit-border-right:           0.07em solid #9D2A00;
-	--default-form-submit-border-bottom:          0.07em solid #9D2A00;
-	--default-form-submit-border-left:            0.07em solid #9D2A00;
-	--default-form-submit-border-radius:          1em;
-
-	--default-form-message-color:                 #9D2A00;
-	--default-form-message-font-size:             1em;
-	--default-form-message-text-align:            center;
-
-	/* old design */
-	/* --default-body-background-image:    url("../img/background_texture.jpg"); */
-	/* --default-body-background-position: left; */
-	/* --default-body-background-repeat:   repeat; */
-	/* --default-body-background-size:     contain; */
-	/* --default-body-background-color:    #262626; */
-	/* --default-body-padding:             0.5em 1.5em; */
-	/* --default-body-color:               #F8F8F8; */
-	/* --default-body-font-family:         Arial, Helvetica, sans-serif; */
-
-	/* --default-form-layout-background:  #DCDCDC; */
-	/* --default-form-layout-padding:     1.5em; */
-	/* --default-form-layout-width:       15em; */
-	/* --default-form-layout-width-media: 14em; */
-	/* --default-form-layout-color:       #000; */
-	/* --default-form-layout-border:      0.07em solid #000; */
-
-	/* --default-form-logo-width:       12em; */
-	/* --default-form-logo-width-media: 11em; */
-
-	/* --default-form-width:       15em; */
-	/* --default-form-width-media: 14em; */
-
-	/* --default-form-title:          2.6em; */
-	/* --default-form-title-media:    2.6em; */
-	/* --default-form-subtitle:       1.4em; */
-	/* --default-form-subtitle-media: 1.4em; */
-
-	/* --default-form-input-background-color: #FFF; */
-	/* --default-form-input-color:            inherit; */
-	/* --default-form-input-padding:          0.2em 0.4em; */
-	/* --default-form-input-font-size:        1.2em; */
-	/* --default-form-input-border-top:       0.07em solid #9D2A00; */
-	/* --default-form-input-border-right:     0.07em solid #9D2A00; */
-	/* --default-form-input-border-bottom:    0.07em solid #9D2A00; */
-	/* --default-form-input-border-left:      0.07em solid #9D2A00; */
-	/* --default-form-input-border-radius:    none; */
-
-	/* --default-form-submit-background-color:       #FF4500; */
-	/* --default-form-submit-background-color-hover: #D83A00; */
-	/* --default-form-submit-color:                  #F8F8F8; */
-	/* --default-form-submit-border-top:             0.07em solid #9D2A00; */
-	/* --default-form-submit-border-right:           0.07em solid #9D2A00; */
-	/* --default-form-submit-border-bottom:          0.07em solid #9D2A00; */
-	/* --default-form-submit-border-left:            0.07em solid #9D2A00; */
-	/* --default-form-submit-border-radius:          none; */
-	
-	/* --default-form-message-color:                 #9D2A00; */
-	/* --default-form-message-font-size:             1em; */
-	/* --default-form-message-text-align:            center; */
+    --default-form-message-color:                 #dc2626;
+    --default-form-message-font-size:             0.875rem;
+    --default-form-message-text-align:            center;
+    --default-form-message-margin:                1rem 0 0 0;
 }
 
 /* --------------------GLOBAL-------------------- */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
-	height: 100%;
+    height: 100%;
 }
+
 body {
-	background-color: var(--default-body-background-color);
-	display: flex;
-	flex-direction: column;
-	margin: 0;
-	height: inherit;
-	color: var(--default-body-color);
-	font-family: var(--default-body-font-family);
-	font-size: 1em;
-	font-weight: 400;
-	text-align: left;
+    background-color: var(--default-body-background-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--default-body-padding);
+    color: var(--default-body-color);
+    font-family: var(--default-body-font-family);
 }
+
 .background-img {
-	background-image: var(--default-body-background-image);
-	background-position: var(--default-body-background-position);
-	background-repeat: var(--default-body-background-repeat);
-	background-size: var(--default-body-background-size);
+    background-image: var(--default-body-background-image);
+    background-position: var(--default-body-background-position);
+    background-repeat: var(--default-body-background-repeat);
+    background-size: var(--default-body-background-size);
 }
 
-/* --------------------FRONT FORM-------------------- */
+.container {
+    width: 100%;
+    max-width: var(--default-form-layout-width);
+    background: var(--default-form-layout-background);
+    padding: var(--default-form-layout-padding);
+    border-radius: var(--default-form-layout-border-radius);
+    box-shadow: var(--default-form-layout-box-shadow);
+}
 
-.front-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	flex: 1 0 auto;
-	padding: var(--default-body-padding);
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
 }
-.front-form .layout {
-	background-color: var(--default-form-layout-background);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: var(--default-form-layout-padding);
-	width: var(--default-form-layout-width);
-	color: var(--default-form-layout-color);
-	border: var(--default-form-layout-border);
+
+.header svg {
+    width: 2rem;
+    height: 2rem;
+    color: #009fdb;
 }
-.front-form .logo {
-	text-align: center;
+
+.header span {
+    color: #009fdb;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-.front-form .logo img {
-	margin-bottom: 0.8em;
-	width: var(--default-form-logo-width);
+
+.status-message {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
-.front-form header {
-	text-align: center;
+
+.status-message.error {
+    background-color: #fef2f2;
+    border: 1px solid #fee2e2;
+    color: var(--default-form-message-color);
 }
-.front-form header .title {
-	margin: 0;
-	font-size: var(--default-form-title);
-	font-weight: 400;
+
+.status-message.success {
+    background-color: #f0fdf4;
+    border: 1px solid #dcfce7;
+    color: #16a34a;
 }
-.front-form header .subtitle {
-	margin: 0.6em 0 0 0;
-	font-size: var(--default-form-subtitle);
-	font-weight: 400;
+
+.content {
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
-.front-form form {
-	display: flex;
-	flex-direction: column;
-	margin-top: 1.4em;
-	width: var(--default-form-width);
+
+.content h1 {
+    color: #1f2937;
+    font-size: var(--default-form-title);
+    margin-bottom: 0.5rem;
 }
-.front-form form input {
-	background-color: var(--default-form-input-background-color);
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	margin: 0;
-	padding: var(--default-form-input-padding);
-	color: var(--default-form-input-color);
-	font-family: var(--default-body-font-family);
-	font-size: var(--default-form-input-font-size);
-	border-top: var(--default-form-input-border-top);
-	border-right: var(--default-form-input-border-right);
-	border-bottom: var(--default-form-input-border-bottom);
-	border-left: var(--default-form-input-border-left);
-	-webkit-border-radius: var(--default-form-input-border-radius);
-	-moz-border-radius: var(--default-form-input-border-radius);
-	border-radius: var(--default-form-input-border-radius);
+
+.content p {
+    color: #4b5563;
 }
-.front-form form input:not(:last-child) {
-	margin-bottom: 0.5em;
+
+.form-group {
+    margin-bottom: 1.5rem;
 }
-.front-form form input[type="submit"] {
-	background-color: var(--default-form-submit-background-color);
-	color: var(--default-form-submit-color);
-	cursor: pointer;
-	border-top: var(--default-form-submit-border-top);
-	border-right: var(--default-form-submit-border-right);
-	border-bottom: var(--default-form-submit-border-bottom);
-	border-left: var(--default-form-submit-border-left);
-	-webkit-border-radius: var(--default-form-submit-border-radius);
-	-moz-border-radius: var(--default-form-submit-border-radius);
-	border-radius: var(--default-form-submit-border-radius);
-	transition: background-color 220ms linear;
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
 }
-.front-form form input[type="submit"]:hover {
-	background-color: var(--default-form-submit-background-color-hover);
-	transition: background-color 220ms linear;
+
+.input-wrapper {
+    position: relative;
 }
-.front-form .layout form .message {
-	margin: 0 0 1em 0;
-	color: var(--default-form-message-color);
-	font-size: var(--default-form-message-font-size);
-	text-align: var(--default-form-message-text-align);
+
+.input-wrapper input {
+    width: 100%;
+    padding: var(--default-form-input-padding);
+    border: var(--default-form-input-border);
+    border-radius: var(--default-form-input-border-radius);
+    outline: none;
+    transition: all 0.2s;
+    background-color: var(--default-form-input-background-color);
+    color: var(--default-form-input-color);
+    font-size: var(--default-form-input-font-size);
 }
-.front-form .layout form .message:not(:empty) {
-	margin-top: 0.25em;
+
+.input-wrapper input:focus {
+    border-color: #009fdb;
+    box-shadow: 0 0 0 2px rgba(0, 159, 219, 0.2);
+}
+
+.input-wrapper svg {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #9ca3af;
+}
+
+button {
+    width: 100%;
+    background-color: var(--default-form-submit-background-color);
+    color: var(--default-form-submit-color);
+    padding: var(--default-form-submit-padding);
+    border: var(--default-form-submit-border);
+    border-radius: var(--default-form-submit-border-radius);
+    font-weight: var(--default-form-submit-font-weight);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--default-form-submit-background-color-hover);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px #009fdb;
+}
+
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
 }
 
 /* --------------------MEDIA QUERIES-------------------- */
 
 @media screen and (max-width: 667px) {
-	.front-form .layout {
-		width: var(--default-form-layout-width-media);
-	}
-	.front-form .layout form {
-		width: var(--default-form-width-media);
-	}
-	.front-form header .title {
-		font-size: var(--default-form-title-media);
-	}
-	.front-form header .subtitle {
-		font-size: var(--default-form-subtitle-media);
-	}
-	.front-form .logo img {
-		width: var(--default-form-logo-width-media);
-	}
+    .container {
+        width: var(--default-form-layout-width-media);
+    }
+    
+    .header span {
+        font-size: 1.25rem;
+    }
+    
+    .content h1 {
+        font-size: var(--default-form-title-media);
+    }
+    
+    .content p {
+        font-size: var(--default-form-subtitle-media);
+    }
 }
